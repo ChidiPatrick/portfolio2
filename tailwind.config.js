@@ -4,6 +4,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        "port-primary": "#2a2b3880",
         "port-gray": "#c4c4c4",
         "port-pink": "#8000ff",
         "port-light-pink": "#cf59e6",

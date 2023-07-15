@@ -1,19 +1,45 @@
-import logo from "./logo.svg";
-import "./App.css";
+import { useState } from "react";
+
+// Third Party Imports ////////////
+
+//// Local directory imports ///////////
+import Header from "./Components/Header/header";
 // import {Routes,Route}?
 
 function App() {
+  const [bioData, setBioData] = useState([]);
+
+  const userData = [
+    { name: "Urch", age: 34 },
+    { name: "Obi", age: 30 },
+  ];
+  const fetchData = async () => {
+    console.log("Fetching your data");
+    const data = await fetch("http://localhost:8000");
+    // console.log(dataBase);
+    const retrievedData = await data.json();
+    console.log(retrievedData);
+    retrievedData.body.map((data) => userData.push(data));
+    console.log(userData);
+    return retrievedData;
+    // return data;
+  };
+
+  // const data = fetchData();
+
+  const postData = async (baseUrl, data) => {
+    console.log("Posting data");
+    const option = {
+      method: "GET",
+      body: JSON.stringify(data),
+    };
+    const res = await fetch(baseUrl);
+  };
+
+  // postData("http://localhost:8000", userData);
   return (
-    <div className="bg-black pt-5 h-screen">
-      <nav
-        className="h-14 bg-gradient-to-r from-gray-700 
-      to-gray-900 border border-gray-600 
-      rounded-md bg-red-700  mx-auto w-3/4"
-      >
-        <div className="p-4 bg-port-gray">name logo</div>
-        <div>full name animation</div>
-        <div>Burger menu</div>
-      </nav>
+    <div className="bg-black font-sans-apple-system   grid grid-cols-8 row-auto">
+      <Header />
     </div>
   );
 }
