@@ -4,7 +4,8 @@ import { useState } from "react";
 
 //// Local directory imports ///////////
 import Header from "./Components/Header/header";
-// import {Routes,Route}?
+import Main from "./Components/Main/main";
+import Comments from "./Components/Comments/comments";
 
 function App() {
   const [bioData, setBioData] = useState([]);
@@ -40,6 +41,8 @@ function App() {
   return (
     <div className="bg-black font-sans-apple-system   grid grid-cols-8 row-auto">
       <Header />
+      <Main />
+      <Comments />
     </div>
   );
 }

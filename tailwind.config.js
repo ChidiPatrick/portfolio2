@@ -11,6 +11,7 @@ module.exports = {
         "port-light-blue": "#6bc5f8",
         "card-grad-from": "#232531",
         "card-grad-to": "#0f0f18",
+        "port-green": "#6b9796",
       },
     },
   },
