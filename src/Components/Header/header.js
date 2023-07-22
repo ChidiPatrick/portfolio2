@@ -29,10 +29,7 @@ const Header = () => {
         <img src="/images/hand-right.webp" alt="right hand" />
       </figure>
       <div className="mt-26">
-        <a
-          href="#"
-          className="text-port-gray border-b border-port-gray absolute left-5 top-3/4 font-bold text-sm"
-        >
+        <a className="text-port-gray border-b border-port-gray absolute left-5 top-3/4 font-bold text-sm">
           VIEW PROJECTS
         </a>
       </div>
