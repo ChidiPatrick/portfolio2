@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 
+import { useLocomotiveScroll } from "react-locomotive-scroll";
+
 /// Imports from local Directory ////
 import { comments } from "./commentsData";
 
 const Comments = () => {
   const [currComment, setCurComment] = useState(0);
-
+  const { scroll } = useLocomotiveScroll();
   //// Button Handler functions ////
 
   const moveRight = (index) => {
@@ -34,13 +36,13 @@ const Comments = () => {
   };
 
   return (
-    <div className="m-4  col-start-1 col-end-9 text-port-gray">
+    <section className="p-4 bg-black col-start-1 col-end-9 text-port-gray border h-[420px]  border-port-gray border-opacity-10">
       {comments.map((comment, index) => {
         return (
           <div
             className={
               index === currComment
-                ? "w-full bg-port-primary p-4 h-80"
+                ? "w-full bg-port-primary p-4 h-80 border  border-port-gray border-opacity-10 rounded-xl"
                 : "hidden"
             }
             key={index}
@@ -78,15 +80,15 @@ const Comments = () => {
               </div>
             </div>
 
-            <div className="w-full flex justify-center items-center">
+            <div className="w-full flex justify-center items-center mt-[20px]">
               <button
-                className="mr-4 p-2 text-black bg-port-gray"
+                className="mr-4 p-1 text-port-gray  border rounded-2xl w-20 border-port-pink bg-black"
                 onClick={() => moveLeft(index)}
               >
                 Prev
               </button>
               <button
-                className="p-2 bg-port-gray text-black"
+                className="p-1 text-port-gray  border rounded-2xl w-20 border-port-pink bg-black"
                 onClick={() => moveRight(index)}
               >
                 Next
@@ -95,7 +97,7 @@ const Comments = () => {
           </div>
         );
       })}
-    </div>
+    </section>
   );
 };
 

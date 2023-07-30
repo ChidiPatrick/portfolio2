@@ -1,14 +1,24 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 // Third Party Imports ////////////
-
+import {
+  LocomotiveScrollProvider,
+  useLocomotiveScroll,
+} from "react-locomotive-scroll";
 //// Local directory imports ///////////
 import Header from "./Components/Header/header";
 import Main from "./Components/Main/main";
 import Comments from "./Components/Comments/comments";
+import NavBar from "./Components/Navigation/navBar";
 
 function App() {
   const [bioData, setBioData] = useState([]);
+  const { scroll } = useLocomotiveScroll();
+  const containerRef = useRef(null);
+  const options = {
+    smooth: true,
+    // el: ref.current,
+  };
 
   const userData = [
     { name: "Urch", age: 34 },
@@ -39,11 +49,13 @@ function App() {
 
   // postData("http://localhost:8000", userData);
   return (
-    <div className="bg-black font-sans-apple-system   grid grid-cols-8 row-auto">
+    <div className="bg-black relative p-2 font-sans-apple-system min-h-screen grid grid-cols-8 row-auto">
+      <NavBar />
       <Header />
       <Main />
       <Comments />
     </div>
+    // </LocomotiveScrollContainer>
   );
 }
 
