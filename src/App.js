@@ -10,6 +10,7 @@ import Header from "./Components/Header/header";
 import Main from "./Components/Main/main";
 import Comments from "./Components/Comments/comments";
 import NavBar from "./Components/Navigation/navBar";
+import Menu from "./Components/menu/menu";
 
 function App() {
   const [bioData, setBioData] = useState([]);
@@ -54,6 +55,7 @@ function App() {
       <Header />
       <Main />
       <Comments />
+      <Menu />
     </div>
     // </LocomotiveScrollContainer>
   );
