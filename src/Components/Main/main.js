@@ -6,9 +6,9 @@ function Main() {
   return (
     <section className="col-start-1 col-end-9 text-port-gray  py-4 px-4 bg-black">
       <p>
-        Hey buddy👋, My name is Patrick, I'm a frontend web developer that is
-        passionate about making aethetically pleasing and highly optimized web
-        applications that solves most of our everyday life problems.
+        Hey buddy👋, My name is Patrick, I'm a frontend web developer based in
+        Lagos, Nigeria. I'm passionate about making cutting-edge, pixel-perfect,
+        beautiful interfaces, and intuitively implemented user experience.
       </p>
       <div className="mt-10 ">
         <h2 className="mt-10 text-2xl font-bold">Yes, I put in the work 💼</h2>
