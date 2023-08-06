@@ -1,10 +1,18 @@
 import React from "react";
 
 import { FaDribbble, FaGithub } from "react-icons/fa6";
-import { useLocomotiveScroll } from "react-locomotive-scroll";
+
 function Main() {
   return (
     <section className="col-start-1 col-end-9 text-port-gray  py-4 px-4 bg-black">
+      {/* <div>
+        <figure>
+          <img
+            src="images/skalo.jpg"
+            className="w-[200px] h-[200px] border border-port-gray rounded-full"
+          />
+        </figure>
+      </div> */}
       <p>
         Hey buddy👋, My name is Patrick, I'm a frontend web developer based in
         Lagos, Nigeria. I'm passionate about making cutting-edge, pixel-perfect,
