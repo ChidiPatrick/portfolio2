@@ -2,6 +2,7 @@ import React from "react";
 
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { motion } from "framer-motion";
 
 function ContactMe() {
   const formik = useFormik({
@@ -19,7 +20,12 @@ function ContactMe() {
   });
 
   return (
-    <div className="min-h-[300px] border  py-2 w-full text-port-gray bg-port-primary border-port-gray border-opacity-10 rounded-xl">
+    <motion.div
+      initial={{ opacity: 0, width: 0 }}
+      whileInView={{ opacity: 1, width: "100%" }}
+      transition={{ duration: 0.4, delay: 0.2 }}
+      className="min-h-[300px] border  py-2 w-full text-port-gray bg-port-primary border-port-gray border-opacity-10 rounded-xl"
+    >
       <h2 className="w-full text-center my-[10px] font-bold text-2xl">
         Contact Me
       </h2>
@@ -81,7 +87,7 @@ function ContactMe() {
           </button>
         </div>
       </form>
-    </div>
+    </motion.div>
   );
 }
 

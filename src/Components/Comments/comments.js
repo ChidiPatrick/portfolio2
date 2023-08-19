@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import { useLocomotiveScroll } from "react-locomotive-scroll";
+import { motion } from "framer-motion";
 
 /// Imports from local Directory ////
 import { comments } from "./commentsData";
@@ -36,7 +37,12 @@ const Comments = () => {
   };
 
   return (
-    <section className="p-4 bg-black col-start-1 col-end-9 text-port-gray border h-[420px]  border-port-gray border-opacity-10">
+    <motion.section
+      initial={{ opacity: 0, scale: 0.1 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.4, delay: 0.2 }}
+      className="p-4 bg-black col-start-1 col-end-9 text-port-gray border h-[420px]  border-port-gray border-opacity-10"
+    >
       {comments.map((comment, index) => {
         return (
           <div
@@ -97,7 +103,7 @@ const Comments = () => {
           </div>
         );
       })}
-    </section>
+    </motion.section>
   );
 };
 
