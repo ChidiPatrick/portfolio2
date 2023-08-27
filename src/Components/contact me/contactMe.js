@@ -7,23 +7,28 @@ import emailjs from "@emailjs/browser";
 
 function ContactMe() {
   const form = useRef();
+  const nameRef = useRef();
+  const messageRef = useRef();
+  const emailRef = useRef();
 
   /// Contact email handler
-  const emailJsHandler = async (e) => {
+  const emailJsHandler = async () => {
     // e.preventDefault();
-
-    console.log("Email handler called");
-
+    console.log(emailRef.current.value);
     emailjs
       .sendForm(
-        process.env.SERVICE_ID,
-        process.env.EMAILJS_TEMPLATE_ID,
-        form,
-        process.env.PUBLIC_KEY
+        `service_spibf6m`,
+        `template_5sv0qip`,
+        form.current,
+        "hJrq-qB3bDT-ypNYr"
       )
       .then(
-        (response) => console.log(response),
-        (error) => console.log(`Error: ${error}`)
+        (response) => {
+          emailRef.current.value = "";
+          messageRef.current.value = "";
+          nameRef.current.value = "";
+        },
+        (error) => console.log(error)
       );
   };
 
@@ -31,12 +36,14 @@ function ContactMe() {
     initialValues: {
       user_name: "",
       user_email: "",
+      message: "",
     },
     validationSchema: Yup.object({
       user_name: Yup.string().required("Required"),
       user_email: Yup.string()
         .email("Invalid email address")
         .required("Required"),
+      message: Yup.string().required("message can not be empty"),
     }),
     onSubmit: (values) => {
       console.log("Submit called");
@@ -59,53 +66,66 @@ function ContactMe() {
         onSubmit={formik.handleSubmit}
         className="w-[90%] my-0 mx-auto"
       >
-        <div className="w-full flex justify-between my-4">
-          <label htmlFor="name" className="w-[20%] p-1">
+        <div className="w-full flex flex-col justify-between my-4">
+          <label htmlFor="name" className="w-[20%] p-1 mb-[10px]">
             Name:
           </label>
           <input
-            className="bg-black p-1 w-[80%] outline-none border border-black focus:border-port-pink rounded-xl"
+            className="bg-black p-1 w-[100%] outline-none border border-black focus:border-port-pink rounded-xl"
             type="text "
-            id="name"
+            id="user_name"
             placeholder="Your name"
             name="user_name"
             value={formik.values.user_name}
             onBlur={formik.handleBlur}
             onChange={formik.handleChange}
+            ref={nameRef}
           />
         </div>
-        {formik.errors.name ? (
-          <div className="text-red-800">{formik.errors.name}</div>
+        {formik.errors.user_name ? (
+          <div className="text-red-800">{formik.errors.user_name}</div>
         ) : null}
 
-        <div className="w-full flex justify-between my-4" htmlFor="userEmail">
-          <label className="w-[20%] p-1 ">Email: </label>
+        <div
+          className="w-full flex flex-col justify-between my-4"
+          htmlFor="userEmail"
+        >
+          <label className="w-[20%] p-1 mb-[10px] ">Email: </label>
           <input
-            className="bg-black p-1 w-[80%] outline-none border border-black focus:border-port-pink rounded-xl"
+            className="bg-black p-1 w-[100%] outline-none border border-black focus:border-port-pink rounded-xl"
             type="email"
-            id="userEmail"
+            id="user_email"
             placeholder="your email"
             name="user_email"
             value={formik.values.user_email}
             onBlur={formik.handleBlur}
             onChange={formik.handleChange}
+            ref={emailRef}
           />
         </div>
         {formik.errors.email ? (
-          <div className="text-red-800">{formik.errors.email}</div>
+          <div className="text-red-800">{formik.errors.user_email}</div>
         ) : null}
 
         <div
-          className="w-full flex items-center justify-between my-4"
+          className="w-full flex flex-col items-start justify-between my-4"
           htmlFor="message"
         >
-          <div className=" p-1 mr-2">Message:</div>
+          <div className=" p-1 mr-2 mb-[10px]">Message:</div>
           <textarea
-            className="bg-black p-1 w-[80%] outline-none border border-port-gray focus:border-port-pink rounded-xl"
+            className="bg-black p-1 w-[100%] outline-none border border-port-gray focus:border-port-pink rounded-xl"
             type="text"
             id="message"
             placeholder="Your message"
+            name="message"
+            value={formik.values.message}
+            onBlur={formik.handleBlur}
+            onChange={formik.handleChange}
+            ref={messageRef}
           ></textarea>
+          {formik.errors.email ? (
+            <div className="text-red-800">{formik.errors.message}</div>
+          ) : null}
         </div>
         <div className="w-full flex justify-center items-center mt-10 mb-5">
           <button

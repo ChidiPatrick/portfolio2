@@ -13,7 +13,10 @@ const Header = () => {
     <header className="p-4 relative col-start-1 col-end-9  min-h-screen">
       <h1 className="mt-28 text-white font-bold text-3xl">
         turning ideas into marketable
-        <span className="text-port-pink mx-2">products </span> is my calling
+        <span className=" bg-gradient-text from-green-400 to-purple-500 mx-2">
+          products{" "}
+        </span>{" "}
+        is my calling
       </h1>
       <figure className="w-10 h-20 absolute top-3 left-0">
         <img src="/images/hand-left.webp" alt="left hand" />

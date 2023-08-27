@@ -13,7 +13,7 @@ const NavBar = () => {
   const displayMenu = useSelector((state) => state.menuSlice.displayMenu);
 
   return (
-    <div className="relative z-300">
+    <div className="relative w-[100%]  z-300">
       <nav
         className={
           "  col-start-1 col-end-9  h-14 border border-gray-600 rounded-md bg-port-primary flex justify-between  mx-auto w-full"

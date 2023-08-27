@@ -34,12 +34,41 @@ function App() {
 
   const displayMenu = useSelector((state) => state.menuSlice.displayMenu);
   return (
-    <div className="bg-black relative p-2 font-sans-apple-system min-h-screen ">
-      <header className="p-2 relative col-start-1 col-end-9  min-h-screen">
-        <NavBar />
+    <div className="bg-black w-[full] relative p-2 font-sans-apple-system min-h-screen ">
+      {/* <div className="fixed z-300 w-[100%] my-0 mx-auto">
+        <nav
+          className={
+            "  col-start-1 col-end-9  h-14 border border-gray-600 rounded-md bg-port-primary flex justify-between  mx-auto w-full"
+          }
+        >
+          <div className="p-2 w-[50px] text-port-gray flex justify-center items-center flex-col ">
+            <div className="grid gap-x-[2px] gap-y[0]  grid-cols-2">
+              {`<PC/>`}
+            </div>
+          </div>
+          <div className="text-port-gray flex justify-center items-center flex-col ">
+            <span>Patrick Chidi</span>
+          </div>
+          <div
+            className="text-port-gray w-20 flex justify-center items-center"
+            onClick={() => toggleMenu(dispatch, showMenu)}
+          >
+            <HiOutlineMenu className="text-[30px] " />
+          </div>
+        </nav>
+        {displayMenu === true ? <Menu /> : null}
+      </div> */}
+
+      <header className="p-2 z-1000 relative col-start-1 col-end-9  min-h-screen">
+        <div className=" fixed top-5 left-5 right-5">
+          <NavBar />
+        </div>
         <h1 className="mt-28 text-white font-bold text-3xl">
           turning ideas into marketable
-          <span className="text-port-pink mx-2">products </span> is my calling
+          <span className="text-transparent bg-clip-text mx-2 bg-gradient-to-r from-purple-700 via-purple-400 to-purple-200">
+            products
+          </span>
+          is my calling
         </h1>
         <figure className="w-10 h-20 absolute top-[15%] left-0">
           <img src="/images/hand-left.webp" alt="left hand" />
@@ -52,7 +81,7 @@ function App() {
             VIEW PROJECTS
           </a>
         </div>
-        <div className="px-2 flex justify-between text-port-gray absolute top-3/4 mt-14 w-full left-0">
+        <div className=" px-2 flex justify-between text-port-gray absolute top-3/4 mt-14 w-full left-0">
           <div className="w-14 h-5 border border-port-pink rounded-full"></div>
           <ul className="flex justify-between w-[150px] item-center">
             <li>

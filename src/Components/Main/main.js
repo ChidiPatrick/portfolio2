@@ -38,7 +38,7 @@ function Main() {
             <div>Project Image here</div>
           </div>
           <div className="mt-2 py-4">
-            <h3 className="w-1/2 text-xl font-bold">
+            <h3 className="w-[100%] text-xl font-bold">
               Attendance management system
             </h3>
             <div className="mt-2">
@@ -70,7 +70,7 @@ function Main() {
             <div>Project Image here</div>
           </div>
           <div className="mt-2 py-4">
-            <h3 className="w-1/2 text-xl font-bold">
+            <h3 className="w-[100%] text-xl font-bold">
               Attendance management system
             </h3>
             <div className="mt-2">
@@ -102,7 +102,7 @@ function Main() {
             <div>Project Image here</div>
           </div>
           <div className="mt-2 py-4">
-            <h3 className="w-1/2 text-xl font-bold">
+            <h3 className="w-[100%] text-xl font-bold">
               Attendance management system
             </h3>
             <div className="mt-2">

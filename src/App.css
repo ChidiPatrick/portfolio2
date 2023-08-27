@@ -61,6 +61,7 @@ html.has-scroll-dragging {
 
 [data-scroll-direction="horizontal"] .c-scrollbar:hover {
   transform: scaleY(1.3);
+  color: #d390ff;
 }
 
 .c-scrollbar_thumb {
