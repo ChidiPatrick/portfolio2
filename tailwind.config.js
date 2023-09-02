@@ -13,6 +13,13 @@ module.exports = {
         "card-grad-to": "#0f0f18",
         "port-green": "#6b9796",
       },
+      screens: {
+        small: "430px",
+        sm: "600px",
+        md: "800px",
+        sl: "900px",
+        // lg: "1"
+      },
     },
   },
   plugins: [],
