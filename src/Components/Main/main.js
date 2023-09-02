@@ -14,18 +14,25 @@ function Main() {
           />
         </figure>
       </div> */}
-      <motion.p
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1, width: "100%" }}
-        transition={{ duration: 0.4, delay: 0.2 }}
-      >
-        Hey buddy👋, My name is Patrick, I'm a frontend web developer based in
-        Lagos, Nigeria. I'm passionate about making cutting-edge, pixel-perfect,
-        beautiful interfaces, and intuitively implemented user experience.
-      </motion.p>
+      <div className="flex justify-center w-full ">
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1, width: "100%" }}
+          transition={{ duration: 0.4, delay: 0.2 }}
+          className="md:px-[50px] lg:w-[80%] lg:px-[100px] mx-auto lg:w-[60%]"
+        >
+          Hey buddy👋, My name is Patrick, I'm a frontend web developer based in
+          Lagos, Nigeria. I'm passionate about making cutting-edge,
+          pixel-perfect, beautiful interfaces, and intuitively implemented user
+          experience.
+        </motion.p>
+      </div>
+
       <motion.div>
-        <h2 className="mt-10 text-2xl font-bold">Yes, I put in the work 💼</h2>
-        <div className="text-sm mt-3">
+        <h2 className="mt-10 text-2xl font-bold md:px-[50px] lg:px-[100px]">
+          Yes, I put in the work 💼
+        </h2>
+        <div className="text-sm mt-3 md:px-[50px]  lg:px-[100px]">
           Each Project is Unique. Here are some of my works
         </div>
         <motion.div

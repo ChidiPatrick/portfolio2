@@ -63,7 +63,7 @@ function App() {
         <div className=" fixed top-5 left-5 right-5">
           <NavBar />
         </div>
-        <h1 className="mt-[180px] md:w-[70%] sl:w-[700px] sm:w-[80%] sm:mx-auto p-2 w-full h-[200px] small:w-[90%] small:mx-auto text-white font-bold text-3xl">
+        <h1 className="mt-[180px] md:w-[70%] md:text-4xl lg:text-5xl sl:w-[700px] lg:w-[900px] lg:px-[50px] sm:w-[80%] sm:mx-auto p-2 w-full h-[200px] small:w-[90%] small:mx-auto text-white font-bold text-3xl">
           turning ideas into marketable
           <span className="text-transparent bg-clip-text mx-2 bg-gradient-to-r from-purple-700 via-purple-400 to-purple-200">
             products

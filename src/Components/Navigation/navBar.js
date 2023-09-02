@@ -6,6 +6,7 @@ import { toggleMenu } from "../menu/menu.handler";
 import Menu from "../menu/menu";
 import { useDispatch, useSelector } from "react-redux";
 import { showMenu, hideMenu } from "../menu/menu.slice";
+import Marquee from "react-fast-marquee";
 
 const NavBar = () => {
   const dispatch = useDispatch();
@@ -25,7 +26,9 @@ const NavBar = () => {
           </div>
         </div>
         <div className="text-port-gray flex justify-center items-center flex-col ">
-          <span>Patrick Chidi</span>
+          <Marquee className="w-[300px]">
+            <span className="w-[300px]">Patrick Chidi</span>
+          </Marquee>
         </div>
         <div
           className="text-port-gray w-20 flex justify-center items-center"
