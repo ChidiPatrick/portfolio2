@@ -56,15 +56,15 @@ function ContactMe() {
       initial={{ opacity: 0, width: 0 }}
       whileInView={{ opacity: 1, width: "100%" }}
       transition={{ duration: 0.4, delay: 0.2 }}
-      className="min-h-[300px] border  py-2 w-full text-port-gray bg-port-primary border-port-gray border-opacity-10 rounded-xl"
+      className="min-h-[300px] border bg-port-primary sl:bg-black   py-2 w-full text-port-gray  border-port-gray border-opacity-10 rounded-xl sl:w-[80%]  sl:mx-auto"
     >
-      <h2 className="w-full text-center my-[10px] font-bold text-2xl">
+      <h2 className="w-full sl:w-[80%] sl:mx-auto  text-center my-[10px] font-bold text-2xl">
         Contact Me
       </h2>
       <form
         ref={form}
         onSubmit={formik.handleSubmit}
-        className="w-[90%] my-0 mx-auto"
+        className="w-[90%] my-0 mx-auto  sl:mx-auto sl:bg-port-primary border-port-gray border-opacity-10 rounded-xl p-[20px]"
       >
         <div className="w-full flex flex-col justify-between my-4">
           <label htmlFor="name" className="w-[20%] p-1 mb-[10px]">

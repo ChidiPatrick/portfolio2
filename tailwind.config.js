@@ -18,7 +18,6 @@ module.exports = {
         sm: "600px",
         md: "800px",
         sl: "900px",
-        // lg: "1"
       },
     },
   },
