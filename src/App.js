@@ -1,10 +1,9 @@
 import { useState, useRef, useEffect } from "react";
 
 // Third Party Imports ////////////
-import {
-  LocomotiveScrollProvider,
-  useLocomotiveScroll,
-} from "react-locomotive-scroll";
+import useMediaQuery from "react-hook-media-query";
+import Marquee from "react-fast-marquee";
+
 //// Local directory imports ///////////
 import Header from "./Components/Header/header";
 import Main from "./Components/Main/main";
@@ -27,41 +26,54 @@ import ContactMe from "./Components/contact me/contactMe";
 function App() {
   const dispatch = useDispatch();
 
+  const largeScreen = useMediaQuery("(min-width: 1000px)");
+  console.log(largeScreen);
+
   const userData = [
     { name: "Urch", age: 34 },
     { name: "Obi", age: 30 },
   ];
 
   const displayMenu = useSelector((state) => state.menuSlice.displayMenu);
+
+  const largeNav = (
+    <div className="relative w-[100%] z-300">
+      <nav className=" h-14 border border-gray-600 rounded-md bg-port-primary flex justify-between p-2 items-center  mx-auto w-full">
+        {/* <figure className="w-[50px] h-[50px] border border-port-gray rounded-full">
+          <img
+            src="images/skalo.jpg"
+            className="w-[100%] h-[100%] border border-transparent rounded-full"
+          />
+        </figure> */}
+        <div className="text-port-gray">{`<PC/>`}</div>
+        <div className="text-port-gray flex justify-center items-center flex-col ">
+          <Marquee className="w-[300px]">
+            <span className="w-[300px]">Patrick Chidi</span>
+          </Marquee>
+        </div>
+        <ul className="text-port-gray flex justify-between w-[50%]">
+          <li>
+            <a href="#projects">Projects</a>
+          </li>
+          <li>
+            <a href="#contactMe">Contact me</a>
+          </li>
+          <li>
+            <a href="#comments">Comments</a>
+          </li>
+          <li>
+            <a href="#aboutMe">About me</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  );
+
   return (
     <div className="bg-black w-[full] relative p-2 font-sans-apple-system min-h-screen ">
-      {/* <div className="fixed z-300 w-[100%] my-0 mx-auto">
-        <nav
-          className={
-            "  col-start-1 col-end-9  h-14 border border-gray-600 rounded-md bg-port-primary flex justify-between  mx-auto w-full"
-          }
-        >
-          <div className="p-2 w-[50px] text-port-gray flex justify-center items-center flex-col ">
-            <div className="grid gap-x-[2px] gap-y[0]  grid-cols-2">
-              {`<PC/>`}
-            </div>
-          </div>
-          <div className="text-port-gray flex justify-center items-center flex-col ">
-            <span>Patrick Chidi</span>
-          </div>
-          <div
-            className="text-port-gray w-20 flex justify-center items-center"
-            onClick={() => toggleMenu(dispatch, showMenu)}
-          >
-            <HiOutlineMenu className="text-[30px] " />
-          </div>
-        </nav>
-        {displayMenu === true ? <Menu /> : null}
-      </div> */}
-
       <header className="p-2 z-1000 relative col-start-1 col-end-9  min-h-screen">
         <div className=" fixed top-5 left-5 right-5">
-          <NavBar />
+          {largeScreen === true ? largeNav : <NavBar />}
         </div>
         <h1 className="mt-[180px] md:w-[70%] md:text-4xl lg:text-5xl sl:w-[700px] lg:w-[900px] lg:px-[50px] sm:w-[80%] sm:mx-auto p-2 w-full h-[200px] small:w-[90%] small:mx-auto text-white font-bold text-3xl">
           turning ideas into marketable

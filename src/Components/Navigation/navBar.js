@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+//Third-party imports
 import { HiMenu, HiOutlineMenu } from "react-icons/hi";
 
 import { toggleMenu } from "../menu/menu.handler";
@@ -37,6 +38,7 @@ const NavBar = () => {
           <HiOutlineMenu className="text-[30px] " />
         </div>
       </nav>
+
       {displayMenu === true ? <Menu /> : null}
     </div>
   );

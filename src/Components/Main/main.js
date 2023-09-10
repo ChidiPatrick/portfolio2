@@ -14,7 +14,7 @@ function Main() {
           />
         </figure>
       </div> */}
-      <div className="flex justify-center w-full ">
+      <div className="flex justify-center w-full " id="aboutMe">
         <p className="md:px-[50px] lg:w-[80%] lg:px-[100px] mx-auto lg:w-[60%]">
           Hey buddy👋, My name is Patrick, I'm a frontend web developer based in
           Lagos, Nigeria. I'm passionate about making cutting-edge,
@@ -30,7 +30,7 @@ function Main() {
         <div className="text-sm mt-3 md:px-[50px]  lg:px-[100px]">
           Each Project is Unique. Here are some of my works
         </div>
-        <div className="sl:w-[80%] mx-auto  ">
+        <div className="sl:w-[80%] mx-auto  " id="projects">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1, width: "100%" }}
