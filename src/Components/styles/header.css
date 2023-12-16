@@ -1,0 +1,36 @@
+.hero {
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 1),
+      80%,
+      rgba(0, 0, 0, 0.7)
+    ),
+    url("../Assets/images/pexels-hero2.jpg");
+}
+
+.line1_gradient {
+  background: linear-gradient(
+    to bottom,
+    rgba(74, 31, 94, 1) 0%,
+    rgba(128, 0, 255, 1) 20%,
+    rgba(128, 0, 255, 1) 97%
+  );
+  color: #8000ff;
+}
+
+.pointer {
+  /* background-color: #9a39cc; */
+  box-shadow: 0 0 30px #9a39cc;
+}
+
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0 10px #9a39cc, 0 0 20px #9a39cc, 0 0 30px #9a39cc;
+  }
+  50% {
+    box-shadow: 0 0 20px #9a39cc, 0 0 30px #9a39cc, 0 0 40px #9a39cc;
+  }
+  100% {
+    box-shadow: 0 0 10px #9a39cc, 0 0 20px #9a39cc, 0 0 30px #9a39cc;
+  }
+}

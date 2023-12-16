@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       colors: {
         "port-primary": "#2a2b3880",
-        "port-gray": "#c4c4c4",
+        "port-gray": "#f1f2f6",
         "port-pink": "#8000ff",
         "port-light-pink": "#cf59e6",
         "port-light-blue": "#6bc5f8",
