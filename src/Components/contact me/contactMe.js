@@ -56,7 +56,7 @@ function ContactMe() {
       initial={{ opacity: 0, width: 0 }}
       whileInView={{ opacity: 1, width: "100%" }}
       transition={{ duration: 0.4, delay: 0.2 }}
-      id="contactMe"
+      id="contact_me"
       className="min-h-[300px] border bg-port-primary sl:bg-black   py-2 w-full text-port-gray  border-port-gray border-opacity-10 rounded-xl sl:w-[80%]  sl:mx-auto"
     >
       <h2 className="w-full sl:w-[80%] sl:mx-auto  text-center my-[10px] font-bold text-2xl">

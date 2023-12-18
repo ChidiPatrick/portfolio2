@@ -18,9 +18,31 @@
   color: #8000ff;
 }
 
+.line2_gradient {
+  background: linear-gradient(
+    to bottom,
+    rgba(179, 0, 255, 1) 0%,
+    rgba(0, 138, 255, 1) 70%,
+    rgba(35, 255, 0, 1) 85%
+  );
+}
+
+.projects_line {
+  background: linear-gradient(
+    to bottom,
+    rgba(31, 96, 12, 1) 19%,
+    rgba(0, 255, 102, 1) 33%,
+    rgba(35, 255, 0, 1) 99%
+  );
+}
+
 .pointer {
   /* background-color: #9a39cc; */
   box-shadow: 0 0 30px #9a39cc;
+}
+
+.pointer_green {
+  box-shadow: 0 0 30px #23ff00;
 }
 
 @keyframes glowing {

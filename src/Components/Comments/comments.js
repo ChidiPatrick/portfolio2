@@ -41,7 +41,7 @@ const Comments = () => {
       initial={{ opacity: 0, scale: 0.1 }}
       whileInView={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.4, delay: 0.2 }}
-      id="comments"
+      id="reviews"
       className="sl:w-[80%] sl:mx-auto p-4 bg-black col-start-1 col-end-9 text-port-gray  h-[420px] "
     >
       {comments.map((comment, index) => {

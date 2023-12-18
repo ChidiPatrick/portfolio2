@@ -56,16 +56,13 @@ function Menu() {
             <a>X</a>
           </motion.li>
           <li className="p-2 flex justify-center my-2 text-port-gray text-xl">
-            <a>Projects</a>
+            <a href="#projects">Projects</a>
           </li>
           <li className="p-2 flex justify-center my-2 text-port-gray text-xl">
-            <a>Contact me</a>
+            <a href="#contact_me">Contact me</a>
           </li>
           <li className="p-2 flex justify-center my-2 text-port-gray text-xl">
-            <a>About me</a>
-          </li>
-          <li className="p-2 flex justify-center my-2 text-port-gray text-xl">
-            <a>Comments</a>
+            <a href="#reviews">Reviews</a>
           </li>
         </motion.ul>
       </motion.div>
