@@ -1,8 +1,8 @@
 import React from "react";
 
-import { HiMenu, HiOutlineMenu } from "react-icons/hi";
-import { Link, useNavigate } from "react-router-dom";
-import { BsArrowDownRightSquareFill, BsArrowDownRight } from "react-icons/bs";
+import { HiOutlineMenu } from "react-icons/hi";
+import { useNavigate } from "react-router-dom";
+import { BsArrowDownRight } from "react-icons/bs";
 import {
   FaFacebookSquare,
   FaGithub,
@@ -22,13 +22,16 @@ import { FaGitSquare } from "react-icons/fa";
 import { BiLogoTailwindCss } from "react-icons/bi";
 import { BiLogoFirebase } from "react-icons/bi";
 import { SiExpress } from "react-icons/si";
+import { showMenu } from "../menu/menu.slice";
+import { useDispatch } from "react-redux";
 import useMediaQuery from "react-hook-media-query";
-import Menu from "../menu/menu";
 
 function HeroSction() {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
-  const deviceWidth = window.innerWidth;
+  const isSmallScreen = useMediaQuery("(max-width: 970px)");
+  console.log(isSmallScreen);
 
   const bigScreenNavBar = (
     <ul className="w-[30%] flex justify-between items-center text-port-gray font-semibold">
@@ -46,32 +49,23 @@ function HeroSction() {
 
   return (
     <header className="p-2 z-1000 relative col-start-1 col-end-9  min-h-screen">
-      <nav className="w-[100%] fixed top-0 left-0 h-[60px]  p-[10px] flex justify-between items-center">
+      <nav className="w-[100%] mx-auto bg-[#2e374ad1] fixed top-0 left-0 h-[60px] p-[10px] flex justify-between items-center">
         <div className="w-[30%] flex items-center">
-          <figure className="w-[50px] h-[50px] mr-[20px] rounded-full ">
-            <img
-              src="images/pato.jpg"
-              className="w-[100%] h-[100%] rounded-full"
-            />
-          </figure>
           <div className="p-2 w-[50px] text-white font-semibold flex justify-center items-center flex-col ">
             <div className="grid gap-x-[2px] gap-y[0]  grid-cols-2">
               {`<PC/>`}
             </div>
           </div>
         </div>
-        {deviceWidth <= 970 ? <Menu /> : bigScreenNavBar}
-        {/* <ul className="w-[30%] flex justify-between items-center text-port-gray font-semibold">
-          <li>
-            <a href="#projects">Projects</a>
-          </li>
-          <li>
-            <a href="#contact_me">Contact me</a>
-          </li>
-          <li>
-            <a href="#reviews">Reviews</a>
-          </li>
-        </ul> */}
+        {isSmallScreen === true ? (
+          <HiOutlineMenu
+            className="text-white"
+            onClick={() => dispatch(showMenu())}
+            size={20}
+          />
+        ) : (
+          bigScreenNavBar
+        )}
       </nav>
       <div className="w-[80%] mx-auto mt-[100px]  min-h-[400px] flex ">
         <div className="w-[5%] min-h-[100%] flex items-center justify-between flex-col">
@@ -91,8 +85,8 @@ function HeroSction() {
         </div>
         <div className="w-[100%] pl-[50px] h-[100%] ">
           <div className="w-[100%] h-[70%] text-white">
-            <h1 className="font-bold text-[60px]">Let's build from here</h1>
-            <p className="text-gray-400 w-[60%] ">
+            <h1 className="font-bold text-[30px]">Let's build from here</h1>
+            <p className="text-gray-400 w-[100%] ">
               Hi, my name is Patrick. I'm a Fullstack web developer that is
               passionate about making cutting-edge, pixel-perfect, beautiful
               interfaces, and intuitively implemented user experience.
@@ -102,10 +96,10 @@ function HeroSction() {
                 href="#projects"
                 className="w-[150px] p-[10px] rounded-md bg-white text-gray-800 mr-[30px]"
               >
-                View projects
+                projects
               </a>
               <a className="w-[150px] p-[10px] rounded-md bg-port-pink text-white">
-                Contact me
+                Contact
               </a>
             </div>
             <div className="flex mt-[20px] px-4">
@@ -140,7 +134,7 @@ function HeroSction() {
             </div>
           </div>
           <div className="w-[100%] mt-[40px] h-[30%] text-gray-400 font-semibold text-[18px]">
-            <h3 className="flex items-center mb-[20px]">
+            <h3 className="flex text-[15px] items-center mb-[20px]">
               <span>
                 Proficient in the following languages and technologies
               </span>{" "}
@@ -148,7 +142,7 @@ function HeroSction() {
                 <BsArrowDownRight size={15} className="text-white font-bold" />
               </div>
             </h3>
-            <div className="w-[100%] flex items-center justify-between h-[100px] p-[10px]">
+            <div className="w-[100%] overflow-x-scroll flex items-center justify-between h-[100px] p-[10px]">
               <div className="flex flex-col justify-center items-center">
                 <IoLogoJavascript className="w-[50px] h-[50px]" />
                 <div>javaScript</div>

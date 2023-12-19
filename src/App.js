@@ -72,6 +72,7 @@ function App() {
       <Main />
       <Comments />
       <ContactMe />
+      {displayMenu === true ? <Menu /> : null}
     </div>
   );
 }
