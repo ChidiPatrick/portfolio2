@@ -44,12 +44,16 @@ const Comments = () => {
       id="reviews"
       className="sl:w-[80%] sl:mx-auto p-4 bg-black col-start-1 col-end-9 text-port-gray  h-[420px] "
     >
+      <h3 className="p-[10px] text-[20px] font-semibold text-gray-400">
+        Recommendations
+      </h3>
+
       {comments.map((comment, index) => {
         return (
           <div
             className={
               index === currComment
-                ? "w-full bg-port-primary p-4 h-80 border  border-port-gray border-opacity-10 rounded-xl"
+                ? "w-full bg-port-primary p-4 h-80 border border-port-gray border-opacity-10 rounded-xl"
                 : "hidden"
             }
             key={index}

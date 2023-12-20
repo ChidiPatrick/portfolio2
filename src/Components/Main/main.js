@@ -8,8 +8,11 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import DashboardCarousel from "../project carousels/dashboad.carousel";
 import StudentAppCarousel from "../project carousels/student.app.carousel";
+import useMediaQuery from "react-hook-media-query";
 
 function Main() {
+  const isMediumScreen = useMediaQuery("(min-width: 600px)");
+
   return (
     <section className="col-start-1 col-end-9 text-port-gray  py-4 px-[10px] bg-black">
       <div className="w-[100%] mx-auto">
@@ -19,39 +22,44 @@ function Main() {
         <div className="text-sm mt-3 md:px-[50px]  lg:px-[100px]">
           Each Project is Unique. Here are some of my works
         </div>
-        <div id="projects" className="flex">
-          {/* <div className="w-[5%] min-h-[100%]  flex items-center  flex-col">
-            <div className=" w-[30px] h-[30px] flex justify-center items-center">
-              <div className="pointer_green mb-[40px] w-[30px] h-[30px] flex justify-center items-center rounded-full text-port-gray ">
-                <GoBriefcase size={20} className="" />
+        <div id="projects" className="flex sl:w-[90%] mx-auto">
+          {isMediumScreen === true ? (
+            <div className="w-[5%] min-h-[100%] flex items-center  flex-col">
+              <div className=" w-[30px] h-[30px] flex justify-center items-center">
+                <div className="pointer_green mb-[40px] w-[30px] h-[30px] flex justify-center items-center rounded-full text-port-gray ">
+                  <GoBriefcase size={20} className="" />
+                </div>
               </div>
-            </div>
-            <div className="projects_line w-[5px] h-[30%] rounded-md"></div>
-            <div className=" w-[30px] h-[30px] mb-[40px] flex justify-center items-center">
-              <div className="pointer_green mt-[40px] w-[30px] h-[30px] flex justify-center items-center rounded-full text-port-gray ">
-                <GoBriefcase size={20} className="" />
+              <div className="projects_line w-[5px] h-[30%] rounded-md"></div>
+              <div className=" w-[30px] h-[30px] mb-[40px] flex justify-center items-center">
+                <div className="pointer_green mt-[40px] w-[30px] h-[30px] flex justify-center items-center rounded-full text-port-gray ">
+                  <GoBriefcase size={20} className="" />
+                </div>
               </div>
-            </div>
-            <div className="projects_line w-[5px] h-[30%] rounded-md"></div>
-            <div className=" w-[30px] h-[30px] mt-[20px] flex justify-center items-center">
-              <div className="pointer_green mt-[40px] w-[30px] h-[30px] flex justify-center items-center rounded-full text-port-gray ">
-                <GoBriefcase size={20} className="" />
+              <div className="projects_line w-[5px] h-[30%] rounded-md"></div>
+              <div className=" w-[30px] h-[30px] mt-[20px] flex justify-center items-center">
+                <div className="pointer_green mt-[40px] w-[30px] h-[30px] flex justify-center items-center rounded-full text-port-gray ">
+                  <GoBriefcase size={20} className="" />
+                </div>
               </div>
-            </div>
-            <div className="projects_line w-[5px] mt-[40px] h-[40%] rounded-md"></div>
-            <div className=" w-[30px] h-[30px] mt-[20px] flex justify-center items-center">
-              <div className="pointer_green mt-[40px] w-[30px] h-[30px] flex justify-center items-center rounded-full text-port-gray ">
-                <GoBriefcase size={20} className="" />
+              <div className="projects_line w-[5px] mt-[40px] h-[40%] rounded-md"></div>
+              <div className=" w-[30px] h-[30px] mt-[20px] flex justify-center items-center">
+                <div className="pointer_green mt-[40px] w-[30px] h-[30px] flex justify-center items-center rounded-full text-port-gray ">
+                  <GoBriefcase size={20} className="" />
+                </div>
               </div>
+              <div className="w-[30px] my-[20px] h-[30px] flex justify-center items-center"></div>
             </div>
-            <div className="w-[30px] my-[20px] h-[30px] flex justify-center items-center"></div>
-          </div> */}
-          <div className="w-[100%] ml-[10px] sl:w-[80%] mx-auto" id="projects">
+          ) : null}
+          <div
+            className="w-[100%] ml-[10px] sl:w-[80%] sl:mx-auto"
+            id="projects"
+          >
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1, width: "100%" }}
               transition={{ duration: 0.4, delay: 0.2 }}
-              className="mt-20 h-[400px] sl:h-[700px] relative border bg-port-primary border-port-gray border-opacity-10 flex flex-col  items-center rounded-xl"
+              className="mt-20 min-h-[400px] sl:h-[700px] relative border bg-port-primary border-port-gray border-opacity-10 flex flex-col  items-center rounded-xl"
             >
               <h3 className="p-[10px] text-gray-400 text-center w-[100%] text-lg font-semibold">
                 Attendance management system's Dashboard
@@ -77,7 +85,7 @@ function Main() {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1, width: "100%" }}
               transition={{ duration: 0.4, delay: 0.2 }}
-              className="w-full mt-20 h-[400px] sl:h-[700px] relative border bg-port-primary border-port-gray border-opacity-10 flex flex-col  items-center rounded-xl"
+              className="w-full mt-20 min-h-[400px] sl:h-[700px] relative border bg-port-primary border-port-gray border-opacity-10 flex flex-col  items-center rounded-xl"
             >
               <h3 className="p-[10px]  text-gray-400 text-center w-[100%] text-lg font-semibold">
                 Attendance management system
