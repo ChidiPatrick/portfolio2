@@ -2,27 +2,23 @@ import React from "react";
 
 //Third-party imports
 import { GoBriefcase } from "react-icons/go";
-import { FaDribbble, FaGithub } from "react-icons/fa6";
 import { motion } from "framer-motion";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
 import DashboardCarousel from "../project carousels/dashboad.carousel";
 import StudentAppCarousel from "../project carousels/student.app.carousel";
 import useMediaQuery from "react-hook-media-query";
 
 function Main() {
   const isMediumScreen = useMediaQuery("(min-width: 600px)");
-
   return (
     <section className="col-start-1 col-end-9 text-port-gray  py-4 px-[10px] bg-black">
       <div className="w-[100%] mx-auto">
-        <h2 className="mt-10 text-2xl font-bold md:px-[50px] sl:[80%] sl:mx-auto lg:px-[100px]">
-          Yes, I put in the work 💼
-        </h2>
-        <div className="text-sm mt-3 md:px-[50px]  lg:px-[100px]">
-          Each Project is Unique. Here are some of my works
+        <div className="w-[100%] flex items-center flex-col justify-center">
+          <h2 className=" text-2xl font-bold sl:w-[80%] sl:mx-auto lg:mx-auto lg:w-[80%]">
+            Projects 💼
+          </h2>
         </div>
-        <div id="projects" className="flex sl:w-[90%] mx-auto">
+        <div id="projects" className="flex sm:w-[100%] lg:w-[90%] mx-auto">
           {isMediumScreen === true ? (
             <div className="w-[5%] min-h-[100%] flex items-center  flex-col">
               <div className=" w-[30px] h-[30px] flex justify-center items-center">
