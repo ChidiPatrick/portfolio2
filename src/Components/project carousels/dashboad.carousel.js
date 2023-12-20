@@ -11,7 +11,7 @@ function DashboardCarousel() {
     "attendance_Today.svg",
     "classSetup.svg",
     "admin_UI.svg",
-    "class_setup_main.svg",
+    "mainClassSetup.svg",
   ];
 
   return (

@@ -55,9 +55,9 @@ function Main() {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1, width: "100%" }}
               transition={{ duration: 0.4, delay: 0.2 }}
-              className="mt-20 min-h-[400px] sl:h-[700px] relative border bg-port-primary border-port-gray border-opacity-10 flex flex-col  items-center rounded-xl"
+              className="mt-[20px] h-[400px] ml:h-[450px] sl:h-[700px] relative border bg-port-primary border-port-gray border-opacity-10 flex flex-col  items-center rounded-xl"
             >
-              <h3 className="p-[10px] text-gray-400 text-center w-[100%] text-lg font-semibold">
+              <h3 className="p-[10px] text-gray-400 text-center w-[100%] text-[15px] font-semibold">
                 Attendance management system's Dashboard
               </h3>
               <div className="w-3/4 mt-10 mx-0 flex place-content-center rounded-xl  bg-black h-80 sl:h-[80%]">
@@ -81,9 +81,9 @@ function Main() {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1, width: "100%" }}
               transition={{ duration: 0.4, delay: 0.2 }}
-              className="w-full mt-20 min-h-[400px] sl:h-[700px] relative border bg-port-primary border-port-gray border-opacity-10 flex flex-col  items-center rounded-xl"
+              className="w-full mt-[40px] h-[350px] ml:h-[450px] sl:h-[700px] relative border bg-port-primary border-port-gray border-opacity-10 flex flex-col  items-center rounded-xl"
             >
-              <h3 className="p-[10px]  text-gray-400 text-center w-[100%] text-lg font-semibold">
+              <h3 className="p-[10px]  text-gray-400 text-center w-[100%] text-[15px] font-semibold">
                 Attendance management system
               </h3>
               <div className="w-[40%] mt-10 mx-0 flex place-content-center rounded-xl   h-80 sl:h-[80%]">
