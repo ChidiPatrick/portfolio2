@@ -95,7 +95,7 @@ function Main() {
                     href="https://lmtechattendancesystem.netlify.app"
                     className="text-sm p-1 text-port-green mt-3 tracking-wider border-b border-port-gray"
                   >
-                    VIEW THE APP
+                    VIEW APP
                   </a>
                 </div>
               </div>
