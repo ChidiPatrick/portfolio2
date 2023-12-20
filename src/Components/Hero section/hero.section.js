@@ -48,7 +48,7 @@ function HeroSction() {
   );
 
   return (
-    <header className="p-2 z-1000 relative col-start-1 col-end-9  min-h-screen">
+    <header className="lg:w-[90%] lg:mx-auto p-[10px] z-1000 relative col-start-1 col-end-9  min-h-screen">
       <nav className="w-[100%] mx-auto bg-[#2e374ad1] fixed top-0 left-0 h-[60px] p-[10px] flex justify-between items-center">
         <div className="w-[30%] flex items-center">
           <div className="p-2 w-[50px] text-white font-semibold flex justify-center items-center flex-col ">
@@ -67,7 +67,7 @@ function HeroSction() {
           bigScreenNavBar
         )}
       </nav>
-      <div className="w-[80%] mx-auto mt-[100px]  min-h-[400px] flex ">
+      <div className="w-[100%] mx-auto mt-[100px] min-h-[400px] flex ">
         <div className="w-[5%] min-h-[100%] flex items-center justify-between flex-col">
           <div className=" w-[30px] h-[30px] flex justify-center items-center">
             <div className=" mb-[20px] p-[5px] w-[10px] h-[10px] rounded-full border-[2px] border-gray-300"></div>
@@ -83,116 +83,116 @@ function HeroSction() {
             <div className="pointer mb-[20px] p-[5px] w-[10px] h-[10px] rounded-full border-[2px] border-gray-300"></div>
           </div>
         </div>
-        <div className="w-[100%] pl-[50px] h-[100%] ">
+        <div className="w-[100%] pl-[20px] h-[100%] ">
           <div className="w-[100%] h-[70%] text-white">
-            <h1 className="font-bold text-[30px]">Let's build from here</h1>
-            <p className="text-gray-400 w-[100%] ">
+            <h1 className="font-bold text-[30px] sm:text-[40px] md:text-[50px] lg-[70px]">
+              Let's build from here
+            </h1>
+            <p className="text-gray-400 w-[100%] md:w-[70%] lg:w-[60%]">
               Hi, my name is Patrick. I'm a Fullstack web developer that is
               passionate about making cutting-edge, pixel-perfect, beautiful
               interfaces, and intuitively implemented user experience.
             </p>
-            <div className="w-[60%]  h-[50px] mt-[30px]">
+            <div className="w-[100%] flex items-center flex-wrap   h-[50px] mt-[50px]">
               <a
                 href="#projects"
-                className="w-[150px] p-[10px] rounded-md bg-white text-gray-800 mr-[30px]"
+                className="md:w-[150px] md:flex md:item-center md:justify-center  p-[10px] rounded-md bg-white text-gray-800 mr-[30px]"
               >
                 projects
               </a>
-              <a className="w-[150px] p-[10px] rounded-md bg-port-pink text-white">
+              <a className="md:w-[150px] md:flex md:item-center md:justify-center p-[10px] rounded-md bg-port-pink text-white">
                 Contact
               </a>
-            </div>
-            <div className="flex mt-[20px] px-4">
-              <ul className="flex justify-between w-[150px] item-center">
-                <li>
-                  <a className="" href="https://www.facebook.com/max.dosky">
-                    <FaFacebookSquare />
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="mailto:okaforpatrick302@gmail.com"
-                    className="text-red-800"
-                  >
-                    <FaGofore />
-                  </a>
-                </li>
-                <li>
-                  <a href="https://www.github.com/ChidiPatrick">
-                    <FaGithub />
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www/linkedin.com/in/patrick-chidiebele"
-                    className="text-blue-800"
-                  >
-                    <FaLinkedinIn />
-                  </a>
-                </li>
-              </ul>
+              <div className="flex items-center mt-[20px] px-4">
+                <ul className="flex p-[10px] justify-between w-[150px] items-center">
+                  <li>
+                    <a className="" href="https://www.facebook.com/max.dosky">
+                      <FaFacebookSquare />
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="mailto:okaforpatrick302@gmail.com"
+                      className="text-red-800"
+                    >
+                      <FaGofore />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.github.com/ChidiPatrick">
+                      <FaGithub />
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www/linkedin.com/in/patrick-chidiebele"
+                      className="text-blue-800"
+                    >
+                      <FaLinkedinIn />
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
-          <div className="w-[100%] mt-[40px] h-[30%] text-gray-400 font-semibold text-[18px]">
-            <h3 className="flex text-[15px] items-center mb-[20px]">
-              <span>
-                Proficient in the following languages and technologies
-              </span>{" "}
+          <div className="w-[100%] mt-[50px] h-[30%] text-gray-400 font-semibold text-[18px]">
+            <h3 className="flex text-[15px] items-center ">
+              <span>Tech stacks</span>{" "}
               <div className="h-[20px] ml-[20px] w-[20px] bg-blue-600 flex justify-center items-center">
                 <BsArrowDownRight size={15} className="text-white font-bold" />
               </div>
             </h3>
-            <div className="w-[100%] overflow-x-scroll flex items-center justify-between h-[100px] p-[10px]">
-              <div className="flex flex-col justify-center items-center">
-                <IoLogoJavascript className="w-[50px] h-[50px]" />
+            <div className="w-[100%] md:w-[80%] md:overflow-x-scroll lg:w-[70%]  overflow-x-scroll flex items-center justify-between h-[100px] p-[10px]">
+              <div className="mr-[10px] text-[12px] flex flex-col justify-center items-center">
+                <IoLogoJavascript className="w-[30px] h-[30px]" />
                 <div>javaScript</div>
               </div>
-              <div className="flex flex-col justify-center items-center">
-                <FaReacteurope className="w-[50px] h-[50px]" />
+              <div className="mr-[10px] text-[12px] flex flex-col justify-center items-center">
+                <FaReacteurope className="w-[30px] h-[30px]" />
                 <div>React.js</div>
               </div>
-              <div className="flex flex-col justify-center items-center">
-                <SiRedux className="w-[50px] h-[50px]" />
+              <div className="mr-[10px] text-[12px] flex flex-col justify-center items-center">
+                <SiRedux className="w-[30px] h-[30px]" />
                 <div>Redux</div>
               </div>
-              <div className="flex flex-col justify-center items-center">
-                <FaNode className="w-[50px] h-[50px]" />
+              <div className="mr-[10px] text-[12px] flex flex-col justify-center items-center">
+                <FaNode className="w-[30px] h-[30px]" />
                 <div>Node.js</div>
               </div>
-              <div className="flex flex-col justify-center items-center">
-                <SiExpress className="w-[50px] h-[50px]" />
+              <div className="mr-[10px] text-[12px] flex flex-col justify-center items-center">
+                <SiExpress className="w-[30px] h-[30px]" />
                 <div>Express.js</div>
               </div>
-              <div className="flex flex-col justify-center items-center">
-                <SiMongodb className="w-[50px] h-[50px]" />
+              <div className="mr-[10px] text-[12px] flex flex-col justify-center items-center">
+                <SiMongodb className="w-[30px] h-[30px]" />
                 <div>MongoDB</div>
               </div>
-              <div className="flex flex-col justify-center items-center">
-                <BiLogoFirebase className="w-[50px] h-[50px]" />
+              <div className="mr-[10px] text-[12px] flex flex-col justify-center items-center">
+                <BiLogoFirebase className="w-[30px] h-[30px]" />
                 <div>Firebase</div>
               </div>
-              <div className="flex flex-col justify-center items-center">
-                <FaHtml5 className="w-[50px] h-[50px]" />
+              <div className="mr-[10px] text-[12px] flex flex-col justify-center items-center">
+                <FaHtml5 className="w-[30px] h-[30px]" />
                 <div>HTML5</div>
               </div>
-              <div className="flex flex-col justify-center items-center">
-                <BiLogoTailwindCss className="w-[50px] h-[50px]" />
+              <div className="mr-[10px] text-[12px] flex flex-col justify-center items-center">
+                <BiLogoTailwindCss className="w-[30px] h-[30px]" />
                 <div>Tailwind CSS</div>
               </div>
-              <div className="flex flex-col justify-center items-center">
-                <MdCss className="w-[50px] h-[50px]" />
+              <div className="mr-[10px] text-[12px] flex flex-col justify-center items-center">
+                <MdCss className="w-[30px] h-[30px]" />
                 <div>CSS3</div>
               </div>
-              <div className="flex flex-col justify-center items-center">
-                <BsFiletypeScss className="w-[50px] h-[50px]" />
+              <div className="mr-[10px] text-[12px] flex flex-col justify-center items-center">
+                <BsFiletypeScss className="w-[30px] h-[30px]" />
                 <div>SCSS</div>
               </div>
-              <div className="flex flex-col justify-center items-center">
-                <FaGitSquare className="w-[50px] h-[50px]" />
+              <div className="mr-[10px] text-[12px] flex flex-col justify-center items-center">
+                <FaGitSquare className="w-[30px] h-[30px]" />
                 <div>Git</div>
               </div>
-              <div className="flex flex-col justify-center items-center">
-                <FaGithub className="w-[50px] h-[50px]" />
+              <div className="mr-[10px] text-[12px] flex flex-col justify-center items-center">
+                <FaGithub className="w-[30px] h-[30px]" />
                 <div>GitHub</div>
               </div>
             </div>

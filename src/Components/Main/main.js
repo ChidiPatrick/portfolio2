@@ -11,8 +11,8 @@ import StudentAppCarousel from "../project carousels/student.app.carousel";
 
 function Main() {
   return (
-    <section className="col-start-1 col-end-9 text-port-gray  py-4 px-4 bg-black">
-      <div className="w-[80%] mx-auto">
+    <section className="col-start-1 col-end-9 text-port-gray  py-4 px-[10px] bg-black">
+      <div className="w-[100%] mx-auto">
         <h2 className="mt-10 text-2xl font-bold md:px-[50px] sl:[80%] sl:mx-auto lg:px-[100px]">
           Yes, I put in the work 💼
         </h2>
@@ -20,7 +20,7 @@ function Main() {
           Each Project is Unique. Here are some of my works
         </div>
         <div id="projects" className="flex">
-          <div className="w-[5%] min-h-[100%]  flex items-center  flex-col">
+          {/* <div className="w-[5%] min-h-[100%]  flex items-center  flex-col">
             <div className=" w-[30px] h-[30px] flex justify-center items-center">
               <div className="pointer_green mb-[40px] w-[30px] h-[30px] flex justify-center items-center rounded-full text-port-gray ">
                 <GoBriefcase size={20} className="" />
@@ -45,15 +45,15 @@ function Main() {
               </div>
             </div>
             <div className="w-[30px] my-[20px] h-[30px] flex justify-center items-center"></div>
-          </div>
-          <div className="sl:w-[80%] mx-auto" id="projects">
+          </div> */}
+          <div className="w-[100%] ml-[10px] sl:w-[80%] mx-auto" id="projects">
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1, width: "100%" }}
               transition={{ duration: 0.4, delay: 0.2 }}
-              className="mt-20 sl:h-[700px] relative border bg-port-primary border-port-gray border-opacity-10 flex flex-col  items-center rounded-xl"
+              className="mt-20 h-[400px] sl:h-[700px] relative border bg-port-primary border-port-gray border-opacity-10 flex flex-col  items-center rounded-xl"
             >
-              <h3 className="p-[10px] text-gray-300 text-center w-[100%] text-xl font-bold">
+              <h3 className="p-[10px] text-gray-400 text-center w-[100%] text-lg font-semibold">
                 Attendance management system's Dashboard
               </h3>
               <div className="w-3/4 mt-10 mx-0 flex place-content-center rounded-xl  bg-black h-80 sl:h-[80%]">
@@ -77,9 +77,9 @@ function Main() {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1, width: "100%" }}
               transition={{ duration: 0.4, delay: 0.2 }}
-              className="w-full mt-20 sl:h-[700px] relative border bg-port-primary border-port-gray border-opacity-10 flex flex-col  items-center rounded-xl"
+              className="w-full mt-20 h-[400px] sl:h-[700px] relative border bg-port-primary border-port-gray border-opacity-10 flex flex-col  items-center rounded-xl"
             >
-              <h3 className="p-[10px] text-center text-gray-300 w-[100%] text-xl font-bold">
+              <h3 className="p-[10px]  text-gray-400 text-center w-[100%] text-lg font-semibold">
                 Attendance management system
               </h3>
               <div className="w-[40%] mt-10 mx-0 flex place-content-center rounded-xl   h-80 sl:h-[80%]">
