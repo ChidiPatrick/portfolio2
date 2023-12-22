@@ -31,7 +31,6 @@ function HeroSction() {
   const dispatch = useDispatch();
 
   const isSmallScreen = useMediaQuery("(max-width: 970px)");
-  console.log(isSmallScreen);
 
   const bigScreenNavBar = (
     <ul className="w-[30%] flex justify-between items-center text-port-gray font-semibold">

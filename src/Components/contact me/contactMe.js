@@ -5,6 +5,7 @@ import * as Yup from "yup";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function ContactMe() {
   const form = useRef();
@@ -22,17 +23,16 @@ function ContactMe() {
         form.current,
         "hJrq-qB3bDT-ypNYr"
       )
-      .then(() =>
-        toast("Message sent successfull", {
-          type: "success",
-          autoClose: 3000,
-        })
-      )
+
       .then(
         (response) => {
           emailRef.current.value = "";
           messageRef.current.value = "";
           nameRef.current.value = "";
+          toast("Message sent successfully", {
+            type: "success",
+            autoClose: 3000,
+          });
         },
         (error) =>
           toast("Something went wrong, please try again later", {
