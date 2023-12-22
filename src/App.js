@@ -71,7 +71,9 @@ function App() {
       <HeroSction />
       <Main />
       <Comments />
-      <ContactMe />
+      <div className="pt-[30px]">
+        <ContactMe />
+      </div>
       {displayMenu === true ? <Menu /> : null}
     </div>
   );

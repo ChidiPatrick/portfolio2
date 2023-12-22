@@ -4,6 +4,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
 
 function ContactMe() {
   const form = useRef();
@@ -14,7 +15,6 @@ function ContactMe() {
   /// Contact email handler
   const emailJsHandler = async () => {
     // e.preventDefault();
-    console.log(emailRef.current.value);
     emailjs
       .sendForm(
         `service_spibf6m`,
@@ -22,13 +22,23 @@ function ContactMe() {
         form.current,
         "hJrq-qB3bDT-ypNYr"
       )
+      .then(() =>
+        toast("Message sent successfull", {
+          type: "success",
+          autoClose: 3000,
+        })
+      )
       .then(
         (response) => {
           emailRef.current.value = "";
           messageRef.current.value = "";
           nameRef.current.value = "";
         },
-        (error) => console.log(error)
+        (error) =>
+          toast("Something went wrong, please try again later", {
+            type: "error",
+            autoClose: 3000,
+          })
       );
   };
 
@@ -46,7 +56,6 @@ function ContactMe() {
       message: Yup.string().required("message can not be empty"),
     }),
     onSubmit: (values) => {
-      console.log("Submit called");
       emailJsHandler();
     },
   });
@@ -57,7 +66,7 @@ function ContactMe() {
       whileInView={{ opacity: 1, width: "100%" }}
       transition={{ duration: 0.4, delay: 0.2 }}
       id="contact_me"
-      className="min-h-[300px] mt-[50px] border bg-port-primary sl:bg-black w-full text-port-gray border-port-gray border-opacity-10 rounded-xl sl:w-[80%] sl:mx-auto"
+      className="min-h-[300px] border bg-port-primary sl:bg-black w-full text-port-gray border-port-gray border-opacity-10 rounded-xl sl:w-[80%] sl:mx-auto"
     >
       <h2 className="w-full text-gray-400 sl:w-[80%] sl:mx-auto  text-center my-[10px] font-bold text-2xl">
         Contact Me
@@ -86,6 +95,7 @@ function ContactMe() {
         {formik.errors.user_name ? (
           <div className="text-red-800">{formik.errors.user_name}</div>
         ) : null}
+        <ToastContainer style={{ width: "100%", textAlign: "center" }} />
 
         <div
           className="w-full flex flex-col justify-between my-4"
